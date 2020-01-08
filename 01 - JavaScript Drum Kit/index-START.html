@@ -59,10 +59,21 @@
       function playSound(e){
         let audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
         let key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+        playFileAddClass(audio, key);
+      }
+
+      function clickSound(){
+        let keyCode = this.getAttribute('data-key');
+        let audio = document.querySelector(`audio[data-key="${keyCode}"]`);
+        let key = document.querySelector(`div[data-key="${keyCode}"]`);
+        playFileAddClass(audio, key);
+      }
+
+      function playFileAddClass(audio, key){
         if(!audio) return;
         audio.currentTime = 0;
         audio.play();
-        key.classList.add('playing')
+        key.classList.add('playing');
       }
 
       function removeClass(e){
@@ -70,8 +81,12 @@
         this.classList.remove('playing');
       }
 
+      const buttons = document.querySelectorAll('.key');
+      buttons.forEach(button => button.addEventListener('click', clickSound));
+
       const keys = document.querySelectorAll('.key');
       keys.forEach(key => key.addEventListener('transitionend', removeClass));
+
       window.addEventListener('keydown', playSound); 
     </script>
   </body>
