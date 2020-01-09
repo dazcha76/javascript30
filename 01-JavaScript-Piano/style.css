@@ -3,3 +3,64 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  padding: 50px;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.piano-container {
+  width: 700px;
+  margin: 50px auto;
+  position: relative;
+  font-size: 40px;
+}
+
+.white-key-container {
+  width: 100%;
+  justify-content: center;
+}
+
+.black-key-container {
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.flex-key {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
+}
+
+.white-key {
+  width: 100px;
+  height: 400px;
+  border: 1px solid black;
+}
+
+.black-key {
+  width: 80px;
+  height: 250px;
+  margin: 0 10px;
+  background-color: black;
+  color: white;
+}
+
+.clear-key {
+  width: 100px;
+  height: 250px;
+}

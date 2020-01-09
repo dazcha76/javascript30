@@ -6,21 +6,27 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
   <body>
-    <div class='white-key-container'>
-      <div data-key='83' class='white-key c'>S</div>
-      <div data-key='68' class='white-key d'>D</div>
-      <div data-key='70' class='white-key e'>F</div>
-      <div data-key='71' class='white-key f'>G</div>
-      <div data-key='72' class='white-key g'>H</div>
-      <div data-key='74' class='white-key a'>J</div>
-      <div data-key='75' class='white-key b'>K</div>
-    </div>
+    <h1>My Piano</h1>
+    <div class='piano-container'>
+      <div class='white-key-container flex'>
+        <div data-key='83' class='white-key c flex-key'>S</div>
+        <div data-key='68' class='white-key d flex-key'>D</div>
+        <div data-key='70' class='white-key e flex-key'>F</div>
+        <div data-key='71' class='white-key f flex-key'>G</div>
+        <div data-key='72' class='white-key g flex-key'>H</div>
+        <div data-key='74' class='white-key a flex-key'>J</div>
+        <div data-key='75' class='white-key b flex-key'>K</div>
+      </div>
 
-    <div data-key='69' class='black-key c-sharp'>E</div>
-    <div data-key='82' class='black-key d-sharp'>R</div>
-    <div data-key='89' class='black-key f-sharp'>Y</div>
-    <div data-key='85' class='black-key g-sharp'>U</div>
-    <div data-key='73' class='black-key a-sharp'>I</div>
+      <div class='black-key-container flex'>
+        <div data-key='69' class='black-key c-sharp flex-key'>E</div>
+        <div data-key='82' class='black-key d-sharp flex-key'>R</div>
+        <div class='clear-key'></div>
+        <div data-key='89' class='black-key f-sharp flex-key'>Y</div>
+        <div data-key='85' class='black-key g-sharp flex-key'>U</div>
+        <div data-key='73' class='black-key a-sharp flex-key'>I</div>
+      </div>
+    </div>
 
     <audio data-key='83' src='sounds/c.mp3'></audio>
     <audio data-key='68' src='sounds/d.mp3'></audio>
