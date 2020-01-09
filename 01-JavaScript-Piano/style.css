@@ -14,10 +14,10 @@ h1 {
 }
 
 .piano-container {
-  width: 700px;
+  width: 750px;
   margin: 50px auto;
   position: relative;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .white-key-container {
@@ -43,24 +43,62 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .white-key {
-  width: 100px;
+  width: 14.5%;
   height: 400px;
   border: 1px solid black;
+  box-shadow: 0 9px 6px -6px black;
+  transition: background-color 0.5s;
 }
 
 .black-key {
-  width: 80px;
+  width: 11%;
   height: 250px;
-  margin: 0 10px;
+  margin: 0 1.5%;
   background-color: black;
   color: white;
+  box-shadow: 0 9px 6px -6px black;
+  transition: background-color 0.5s;
 }
 
 .clear-key {
-  width: 100px;
+  width: 15%;
   height: 250px;
 }
+
+#red {
+  background-color: red;
+}
+
+#orange {
+  background-color: orange;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#green {
+  background-color: green;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#indigo {
+  background-color: indigo;
+}
+
+#violet {
+  background-color: violet;
+}
+
+#playing {
+  background-color: white;
+  color: black;
+}
+
