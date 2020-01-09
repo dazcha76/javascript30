@@ -4,13 +4,10 @@
   box-sizing: border-box;
 }
 
-body {
-  padding: 50px;
-}
-
 h1 {
   font-size: 50px;
   text-align: center;
+  margin: 50px;
 }
 
 .piano-container {
@@ -73,28 +70,56 @@ h1 {
   background-color: red;
 }
 
+.red {
+  color: red;
+}
+
 #orange {
   background-color: orange;
+}
+
+.orange {
+  color: orange;
 }
 
 #yellow {
   background-color: yellow;
 }
 
+.yellow {
+  color: yellow;
+}
+
 #green {
   background-color: green;
+}
+
+.green {
+  color: green;
 }
 
 #blue {
   background-color: blue;
 }
 
+.blue {
+  color: blue;
+}
+
 #indigo {
   background-color: indigo;
 }
 
+.indigo {
+  color: indigo;
+}
+
 #violet {
   background-color: violet;
+}
+
+.violet {
+  color: violet;
 }
 
 #playing {
@@ -102,3 +127,66 @@ h1 {
   color: black;
 }
 
+@media screen and (max-width: 830px) and (orientation: landscape) {
+  h1 {
+    font-size: 40px;
+    margin: 15px 10px;
+  }
+
+  .piano-container {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .white-key {
+    width: 14.1%; 
+    height: 70vh;
+  }
+
+  .black-key {
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 770px) and (orientation: portrait) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .piano-container {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .white-key {
+    height: 45vh;
+  }
+
+  .black-key {
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .piano-container {
+    font-size: 20px;
+  }
+
+  .white-key {
+    height: 30vh;
+  }
+
+  .black-key {
+    height: 18vh;
+  }
+}
+
+@media screen and (max-width: 360px){
+  .white-key {
+    height: 35vh;
+  }
+
+  .black-key {
+    height: 20vh;
+  }
+}
