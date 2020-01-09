@@ -57,6 +57,7 @@ h1 {
   margin: 0 1.5%;
   background-color: black;
   color: white;
+  border: 1px solid black;
   box-shadow: 0 9px 6px -6px black;
   transition: background-color 0.5s;
 }
