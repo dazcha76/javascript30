@@ -59,17 +59,17 @@
       function playSound(e){
         let audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
         let key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-        playFileAddClass(audio, key);
+        playFile(audio, key);
       }
 
       function clickSound(){
         let keyCode = this.getAttribute('data-key');
         let audio = document.querySelector(`audio[data-key="${keyCode}"]`);
         let key = document.querySelector(`div[data-key="${keyCode}"]`);
-        playFileAddClass(audio, key);
+        playFile(audio, key);
       }
 
-      function playFileAddClass(audio, key){
+      function playFile(audio, key){
         if(!audio) return;
         audio.currentTime = 0;
         audio.play();
@@ -89,5 +89,6 @@
 
       window.addEventListener('keydown', playSound); 
     </script>
+    
   </body>
 </html>
