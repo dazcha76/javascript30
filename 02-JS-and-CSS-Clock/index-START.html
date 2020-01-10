@@ -18,7 +18,7 @@
 
   <style>
     html {
-      background:#018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
+      background:#018DED;
       background-size:cover;
       font-family:'helvetica neue';
       text-align: center;
@@ -62,12 +62,50 @@
       background:black;
       position: absolute;
       top:50%;
+      transform: rotate(90deg);
+      transform-origin: 100%;
+      transition-timing-function: cubic-bezier(0, 1.82, 0.58, 1);
+      transition: all 0.05s;
+    }
+
+    .hour-hand {
+      width: 25%;
+      left: 25%;
+    }
+
+    .min-hand {
+      width: 45%;
+      left: 5%;
+    }
+
+    .second-hand {
+      height: 3px;
+      background-color: red;
     }
 
   </style>
-
   <script>
+    function getTime(){
+      let date = new Date();
+      let hours = date.getHours();
+      let minutes = date.getMinutes();
+      let seconds = date.getSeconds();
+      let hourDegrees = ((hours/12) *360) + 90;
+      let minuteDegrees = ((minutes/60) *360) + 90;
+      let secondDegrees = ((seconds/60) *360) + 90;
 
+      let hourHand = document.querySelector('.hour-hand');
+      let minuteHand = document.querySelector('.min-hand');
+      let secondHand = document.querySelector('.second-hand');
+
+      hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+      minuteHand.style.transform = `rotate(${minuteDegrees}deg)`;
+      secondHand.style.transform = `rotate(${secondDegrees}deg)`;
+
+      console.log([hours, minutes, seconds])
+    }
+
+    setInterval(getTime, 1000)
 
   </script>
 </body>
