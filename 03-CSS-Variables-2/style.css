@@ -1,0 +1,47 @@
+:root {
+  --clip: 5%;
+  --rotate: 180deg;
+  --opacity: 10;
+}
+
+body {
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 40px 0 20px;
+}
+
+.pair {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+label {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+img {
+  height: 70vh;
+  margin-top: 40px;
+  clip-path: circle(var(--clip));
+  transform: rotate(var(--rotate));
+  opacity: calc(var(--opacity)/100);
+}
+
+@media screen and (max-width: 660px){
+  .controls,
+  .pair {
+    flex-direction: column;
+  }
+
+  img {
+    height: 65vh;
+    margin-top: 20px;
+  }
+}

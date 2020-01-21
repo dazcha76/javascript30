@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Reveal</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <h1>Reveal the Superhero</h1>
+
+    <div class="controls">
+      <div class="pair">
+        <label for="opacity">Opacity:</label>
+        <input type="range" name="opacity" min="0" max="100" value="10">
+      </div>
+      <div class="pair">
+        <label for="clip">Clip Path:</label>
+        <input type="range" name="clip" min="0" max="70" value="5" data-sizing="%">
+      </div>
+      <div class="pair">
+        <label for="rotate">Rotate:</label>
+        <input type="range" name="rotate" min="0" max="360" value="180" data-sizing="deg">
+      </div>
+    </div>
+
+    <img>
+
+    <script type="text/javascript">  
+      const images = [
+        './images/captain-america.png',
+        './images/hulk.png',
+        './images/thor.png',
+        './images/iron-man.png'
+      ];
+
+      let randomNum = Math.floor(Math.random() * 4);
+
+      let inputs = document.querySelectorAll('input');
+
+      document.querySelector('img').setAttribute('src', images[randomNum]);
+
+      function changeEffects(){
+        const suffix = this.dataset.sizing || "";
+        document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix)
+      }
+      
+      inputs.forEach(input => input.addEventListener('change', changeEffects));
+      inputs.forEach(input => input.addEventListener('mousemove', changeEffects));
+    </script>
+   
+  </body>
+</html>
