@@ -40,7 +40,7 @@ hr {
 
 @media screen and (max-width: 750px){
   .pair {
-    grid-template-columns: 90%;
-    justify-content: center;  
+    display: flex;
+    flex-direction: column;  
   }
 }

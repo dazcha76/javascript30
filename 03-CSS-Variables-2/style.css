@@ -1,7 +1,7 @@
 :root {
-  --clip: 5%;
-  --rotate: 180deg;
-  --opacity: 10;
+  --color: 100%;
+  --rotate: 130deg;
+  --opacity: 0;
 }
 
 body {
@@ -29,7 +29,7 @@ label {
 img {
   height: 70vh;
   margin-top: 40px;
-  clip-path: circle(var(--clip));
+  filter: grayscale(var(--color));
   transform: rotate(var(--rotate));
   opacity: calc(var(--opacity)/100);
 }
