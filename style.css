@@ -37,3 +37,10 @@ hr {
   border: 0.5px solid black;
   margin: 20px 0 40px;
 }
+
+@media screen and (max-width: 750px){
+  .pair {
+    grid-template-columns: 90%;
+    justify-content: center;  
+  }
+}
